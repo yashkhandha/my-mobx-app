@@ -21,6 +21,8 @@ export const WishListItem = types
 		}
 	}));
 
-export const WishList = types.model({
-	items: types.optional(types.array(WishListItem), [])
-});
+export const WishList = types
+	.model({
+		items: types.optional(types.array(WishListItem), [])
+	})
+	.actions(self);
